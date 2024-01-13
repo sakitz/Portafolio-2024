@@ -5,7 +5,6 @@ export default {
 		extend: {
 			fontFamily: {
 				index: ['Josefin Sans', 'sans-serif'],
-				Logo: ['Rubik Doodle Shadow', 'system-ui']
 			  },
 			  screens: {
 				'tlmc': '320px',
