@@ -1,8 +1,7 @@
 ---
 import { getI18N }from '../i18n/'
-import ImageEs from '../../public/espana.webp'    
-import ImageEn from '../../public/estados-unidos.webp'    
-
+import ImageEs from '../../public/espain.svg'    
+import ImageEn from '../../public/eeuu.svg'    
 
 import { Image } from 'astro:assets'
 const { currentLocale = 'es' } = Astro
@@ -39,8 +38,8 @@ const i18n = getI18N({ currentLocale })
             </li>
 
             <section class="flex text-xl m-0 p-0 icono">
-                <a class="flex-row justify-center  text-white cursor-pointer hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55  hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-125 scale-90 opacity-90 hover:opacity-100 px-5 py-2.5" href="/"><Image src={ImageEs} alt="español"></a>
-                <a href="/en" class="flex-row justify-center  text-white cursor-pointer hover:bg-sky-600 focus:ring-4 focus:outine-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-125 scale-90 opacity-90 hover:opacity-100 px-5 py-2.5"> <Image src={ImageEn} alt="Ingles"> </a>  
+                <a class="flex-row justify-center  text-white cursor-pointer hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55  hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-125 scale-90 opacity-90 hover:opacity-100 px-5 py-2.5" href="/"><Image src={ImageEs} class='w-12 h-12 ' alt="español"></a>
+                <a href="/en" class="flex-row justify-center  text-white cursor-pointer hover:bg-sky-600 focus:ring-4 focus:outine-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-125 scale-90 opacity-90 hover:opacity-100 px-5 py-2.5"> <Image src={ImageEn} class='w-12 h-12 ' alt="Ingles"> </a>  
             </section>
 
         </ul>
@@ -52,19 +51,16 @@ const i18n = getI18N({ currentLocale })
                 <i class='bx bx-x' id="close-icon"></i>
             </label>
 
-            <a href="/" class="tlmc:pt-2 tlmc:ml-4"><Image src={ImageEs} alt="boton idioma español"></a>
-            <a href="/en" class="tlg:mr-24 sm:mr-32 ml-12 my-2"><Image src={ImageEn} alt="Button Language EE.UU"></a>   
+            <a href="/" class="tlmc:pt-2 tlmc:ml-4"><Image src={ImageEs} class='w-12 h-12 ' alt="boton idioma español"></a>
+            <a href="/en" class="tlg:mr-24 sm:mr-32 ml-12 my-2"><Image src={ImageEn} class='w-12 h-12' alt="Button Language EE.UU"></a>   
 
             <nav class="navbar">
                 <a href="#" style="--i:1" >{i18n.LINK_PRO_HEAD}</a>
                 <a href="#" style="--i:2">{i18n.LINK_EXP_HEAD}</a>
                 <a href="#" style="--i:3">{i18n.LINK_ABOUT_HEAD}</a>
                 <a href="#" style="--i:4">{i18n.LINK_FORM_HEAD}</a>
-            </nav>
-            
+            </nav>            
         </section>
-        
-
     </nav>
 </header>
 
